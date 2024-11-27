@@ -1,4 +1,5 @@
-﻿using DataAppMAUIGrupo03.Models;
+﻿using DataAppMAUIGrupo03.Interfaces;
+using DataAppMAUIGrupo03.Models;
 using DataAppMAUIGrupo03.Repositories;
 
 namespace DataAppMAUIGrupo03
@@ -6,13 +7,16 @@ namespace DataAppMAUIGrupo03
     public partial class MainPage : ContentPage
     {
         public EstudianteUDLA estudiante;
-        EstudianteUDLAFilesRepository _repository;
+        public List<EstudianteUDLA> estudiantes;
+
+        IEstudianteUDLARepository _repository;
 
         public MainPage()
         {
             InitializeComponent();
-            _repository = new EstudianteUDLAFilesRepository();
+            _repository = new EstudianteUDLAAPIsRepository();
             estudiante = _repository.DevuelveInfoEstudianteUDLA(1);
+            estudiantes = _repository.DevuelveListadoEstudianteUDLA();
 
             BindingContext = estudiante;
         }
