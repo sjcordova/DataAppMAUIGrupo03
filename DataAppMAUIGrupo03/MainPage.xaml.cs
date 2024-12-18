@@ -14,7 +14,7 @@ namespace DataAppMAUIGrupo03
         public MainPage()
         {
             InitializeComponent();
-            _repository = new EstudianteUDLAAPIsRepository();
+            _repository = new EstudianteUDLASQLiteRepository();
             estudiante = _repository.DevuelveInfoEstudianteUDLA(1);
             estudiantes = _repository.DevuelveListadoEstudianteUDLA();
 

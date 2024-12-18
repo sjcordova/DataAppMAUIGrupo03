@@ -36,10 +36,11 @@
                  x:Name="label_carrera"
                  Text="{Binding Carrera}" />
 
+            <!--
             <Button
                 x:Name="BotonGuardarEstudiante"
                 Text="Guardar Estudiante en archivo"
-                Clicked="BotonGuardarEstudiante_Clicked"/>
+                Clicked="BotonGuardarEstudiante_Clicked"/>-->
 
 
         </VerticalStackLayout>
