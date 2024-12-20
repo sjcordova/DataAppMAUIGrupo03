@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using SQLite;
+using System.Diagnostics.CodeAnalysis;
+
 
 namespace DataAppMAUIGrupo03.Models
 {
@@ -15,8 +13,11 @@ namespace DataAppMAUIGrupo03.Models
             Carrera = "";
         }
 
+        [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
+        [MaxLength(200)]
         public string Nombre { get; set; }
+        [MaxLength(100), AllowNull]
         public string Carrera { get; set; }
     }
 }

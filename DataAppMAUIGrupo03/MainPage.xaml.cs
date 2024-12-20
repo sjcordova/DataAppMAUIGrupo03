@@ -16,7 +16,7 @@ namespace DataAppMAUIGrupo03
             InitializeComponent();
             _repository = new EstudianteUDLASQLiteRepository();
             estudiante = _repository.DevuelveInfoEstudianteUDLA(1);
-            estudiantes = _repository.DevuelveListadoEstudianteUDLA();
+            estudiantes = _repository.DevuelveListadoEstudiantesUDLA();
 
             BindingContext = estudiante;
         }

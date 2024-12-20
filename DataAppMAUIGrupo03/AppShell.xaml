@@ -3,13 +3,13 @@
     x:Class="DataAppMAUIGrupo03.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:DataAppMAUIGrupo03"
+    xmlns:local="clr-namespace:DataAppMAUIGrupo03.Views"
     Shell.FlyoutBehavior="Disabled"
     Title="DataAppMAUIGrupo03">
 
     <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
+        ContentTemplate="{DataTemplate local:EstudiantesUDLAView}"
         Route="MainPage" />
 
 </Shell>

@@ -9,7 +9,7 @@ namespace DataAppMAUIGrupo03.Interfaces
 {
     public interface IEstudianteUDLARepository
     {
-        List<EstudianteUDLA> DevuelveListadoEstudianteUDLA();
+        List<EstudianteUDLA> DevuelveListadoEstudiantesUDLA();
         EstudianteUDLA DevuelveInfoEstudianteUDLA(int Id);
         Boolean CrearEstudianteUDLA(EstudianteUDLA estudiante);
         Boolean ActualizarEstudianteUDLA(EstudianteUDLA estudiante);

@@ -45,7 +45,7 @@ namespace DataAppMAUIGrupo03.Repositories
             return estudiante;
         }
 
-        public List<EstudianteUDLA> DevuelveListadoEstudianteUDLA()
+        public List<EstudianteUDLA> DevuelveListadoEstudiantesUDLA()
         {
             List<EstudianteUDLA> estudiantes = new List<EstudianteUDLA>();
             estudiantes.Add(DevuelveInfoEstudianteUDLA(1));

@@ -35,7 +35,7 @@ namespace DataAppMAUIGrupo03.Repositories
             throw new NotImplementedException();
         }
 
-        public List<EstudianteUDLA> DevuelveListadoEstudianteUDLA()
+        public List<EstudianteUDLA> DevuelveListadoEstudiantesUDLA()
         {
             List <EstudianteUDLA> estudiantesUDLA = new List<EstudianteUDLA>();
             using (_httpClient)

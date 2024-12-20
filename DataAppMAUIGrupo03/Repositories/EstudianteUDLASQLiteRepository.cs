@@ -27,27 +27,55 @@ namespace DataAppMAUIGrupo03.Repositories
 
         public bool ActualizarEstudianteUDLA(EstudianteUDLA estudiante)
         {
-            throw new NotImplementedException();
+            try
+            {
+                int actualizar = _connection.Update(estudiante);
+                return actualizar > 0;
+            }
+            catch(Exception e)
+            {
+                return false;
+            }
         }
 
         public bool CrearEstudianteUDLA(EstudianteUDLA estudiante)
         {
-            throw new NotImplementedException();
+            try
+            {
+                int registros= _connection.Insert(estudiante);
+                return registros > 0;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
         }
 
         public EstudianteUDLA DevuelveInfoEstudianteUDLA(int Id)
         {
-            throw new NotImplementedException();
+            EstudianteUDLA estudiante = new EstudianteUDLA();
+            estudiante = _connection.Get<EstudianteUDLA>(Id);
+            return estudiante;
         }
 
-        public List<EstudianteUDLA> DevuelveListadoEstudianteUDLA()
+        public List<EstudianteUDLA> DevuelveListadoEstudiantesUDLA()
         {
-            throw new NotImplementedException();
+            List<EstudianteUDLA> estudiantes = new List<EstudianteUDLA>();
+            estudiantes = _connection.Table<EstudianteUDLA>().ToList();
+            return estudiantes;
         }
 
         public bool EliminarEstudianteUDLA(int Id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                int registrosEliminados = _connection.Delete<EstudianteUDLA>(Id);
+                return registrosEliminados > 0;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
         }
     }
 }
